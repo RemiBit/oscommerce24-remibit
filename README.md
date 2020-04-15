@@ -14,7 +14,7 @@ In this example we will be using the default oscommerce configuration, so the we
 
 ## Installation
 
-1/. Go to the oscommerce directory and then to the directory where you have to place the module files.
+1/. Go to the oscommerce directory
 
 ```
 cd /var/www/html/oscommerce
