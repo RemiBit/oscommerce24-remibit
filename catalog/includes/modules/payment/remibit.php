@@ -149,7 +149,7 @@ class remibit
                 $post_string[] = "<input type='hidden' name='$key' value='$value'/>";
             }
 
-            $gateway_url = MODULE_PAYMENT_REMIBIT_GETAWAY_URL;
+            $gateway_url = MODULE_PAYMENT_REMIBIT_GATEWAY_URL;
 
             $this->sendTransactionToGateway($gateway_url, $post_string);
         }
@@ -346,7 +346,7 @@ class remibit
                 'desc' => 'Signature Key',
                 'type' => 'password'),
 
-            'MODULE_PAYMENT_REMIBIT_MD5_HASH' => array('title' => 'MD5 Hash',
+            'MODULE_PAYMENT_REMIBIT_MD5_HASH' => array('title' => 'MD5 Hash Value',
                 'desc' => 'The MD5 Hash value to verify transactions with',
                 'type' => 'password'),
 
@@ -356,8 +356,8 @@ class remibit
                 'use_func' => 'tep_get_order_status_name',
                 'set_func' => 'tep_cfg_pull_down_order_statuses('),
 
-            'MODULE_PAYMENT_REMIBIT_GETAWAY_URL' => array('title' => 'Getaway url',
-                'desc' => 'URL API',
+            'MODULE_PAYMENT_REMIBIT_GATEWAY_URL' => array('title' => 'Endpoint URL',
+                'desc' => 'API URL',
                 'value' => 'https://app.remibit.com/pay',
                 'type' => 'text'),
         );
